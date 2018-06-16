@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script>
+		function DrawSmile(){
+			var cv=document.getElementById('mycanvas');		
+			if (cv.getContext) {
+				var obj=cv.getContext("2d");
+				obj.arc(50,50,20,0,360,true);
+				var g = obj.createLinearGradient(40,40,50,75);
+				g.addColorStop(0,"#F9FF88");
+				g.addColorStop(1,"#E0C000");
+				obj.fillStyle=g;
+				obj.fill();
+				obj.beginPath();
+				obj.arc(44,45,2,0,360,true);
+				obj.fillStyle="#FFFFFF";
+				obj.fill();
+
+				obj.beginPath();
+				obj.arc(44,45,2,0,360,true);
+				obj.fillStyle="#888888";
+				obj.fill();
+
+				obj.beginPath();
+				obj.arc(58,45,2,0,360,true);
+				obj.fillStyle="#FFFFFF";
+				obj.fill();
+
+				obj.beginPath();
+				obj.arc(58,45,2,0,360,true);
+				obj.fillStyle="#888888";
+				obj.fill();
+
+				obj.beginPath();
+				obj.arc(50,55,10,0,Math.PI,false);
+				obj.stroke();
+				
+			}
+		}
+	
+	</script>
+</head>
+<body onload='DrawSmile()'>
+	<canvas id="mycanvas"></canvas>
+
+</body>
+</html>
